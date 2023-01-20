@@ -11,5 +11,5 @@ Dir to keep Starship Presets (a.k.a Themes)
 ## Presets so far
 ### jusao_pastelprincess
 - Variant of Pastel Powerline (https://starship.rs/presets/pastel-powerline.html)
-- Replacement/add of components useful for Python + Cloud Ops like Kubernetes and AWS Vault
+- Replacement/add of components useful for Python + Cloud Ops like Conda, Kubernetes and AWS Vault
 ### 🚧 More presets coming soon 🚧
