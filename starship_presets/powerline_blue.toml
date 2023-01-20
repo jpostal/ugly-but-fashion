@@ -1,0 +1,90 @@
+format = """
+[](#00004d)\
+$os\
+$username\
+[](fg:#00004d bg:#000066)\
+$conda\
+[](fg:#000066 bg:#000080)\
+$directory\
+[](fg:#000080 bg:#000099)\
+$git_branch\
+$git_status\
+[](fg:#000099 bg:#0000b3)\
+$kubernetes\
+[](fg:#0000b3 bg:#0000cc)\
+$time\
+[ ](fg:#0000cc)\
+$aws
+$character
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+style = "bg:#00004d"
+disabled = true # Disabled by default
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "bg:#00004d"
+style_root = "bg:#00004d"
+format = '[$user ]($style)'
+disabled = false
+
+[conda]
+symbol = " "
+style = "bg:#000066"
+format = '[ $symbol ($environment) ]($style)'
+disabled = false
+
+[directory]
+style = "bg:#000080"
+format = "[ $path ]($style)"
+truncation_length = 4
+truncate_to_repo = false
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[git_branch]
+symbol = ""
+style = "bg:#000099"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#000099"
+format = '[$all_status$ahead_behind ]($style)'
+
+[kubernetes]
+symbol = "⎈ "
+style = "bg:#0000b3"
+format = '[ $symbol ($context) | ($namespace) ]($style)'
+disabled = false
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#0000cc"
+format = '[  $time ]($style)'
+
+# No custom format for aws, default one is cool ;)
+
+[character]
+success_symbol = '[❯](bold #DDDDDD)'
+error_symbol = '[❯](bold red)'
