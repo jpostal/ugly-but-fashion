@@ -1,19 +1,19 @@
 format = """
-[](#26004d)\
+[](#191970)\
 $os\
 $username\
-[](fg:#26004d bg:#330066)\
+[](fg:#191970 bg:#002395)\
 $conda\
-[](fg:#330066 bg:#400080)\
+[](fg:#002395 bg:#00416a)\
 $directory\
-[](fg:#400080 bg:#4d0099)\
+[](fg:#00416a bg:#16537e)\
 $git_branch\
 $git_status\
-[](fg:#4d0099 bg:#5900b3)\
+[](fg:#16537e bg:#1560bd)\
 $kubernetes\
-[](fg:#5900b3 bg:#6600cc)\
+[](fg:#1560bd bg:#3366ff)\
 $time\
-[ ](fg:#6600cc)\
+[ ](fg:#3366ff)\
 $aws
 $character
 """
@@ -24,26 +24,26 @@ $character
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = "bg:#26004d"
+style = "bg:#191970"
 disabled = true # Disabled by default
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#26004d"
-style_root = "bg:#26004d"
+style_user = "bg:#191970"
+style_root = "bg:#191970"
 format = '[☥ ($user) ☥ ]($style)'
 disabled = false
 
 [conda]
-symbol = " "
-style = "bg:#330066"
+symbol = "󰌠 "
+style = "bg:#002395"
 format = '[ $symbol ($environment) ]($style)'
 disabled = false
 
 [directory]
-style = "bg:#400080"
+style = "bg:#00416a"
 format = "[ $path ]($style)"
 truncation_length = 4
 truncate_to_repo = false
@@ -64,26 +64,26 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#4d0099"
+style = "bg:#16537e"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#4d0099"
+style = "bg:#16537e"
 format = '[$all_status$ahead_behind ]($style)'
 
 [kubernetes]
 symbol = "⎈ "
-style = "bg:#5900b3"
+style = "bg:#1560bd"
 format = '[ $symbol ($context) | ($namespace) ]($style)'
 disabled = false
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#6600cc"
-format = '[  $time ]($style)'
+style = "bg:#3366ff"
+format = '[  $time ]($style)'
 
-# No custom format for aws, default one is cool ;)
+# No custom format for aws, default one is cool
 
 [character]
 success_symbol = '[❯](bold #DDDDDD)'
