@@ -81,7 +81,7 @@ disabled = false
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#6600cc"
-format = '[   $time ]($style)'
+format = '[  $time ]($style)'
 
 # No custom format for aws, default one is cool 
 
